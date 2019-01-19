@@ -14,9 +14,19 @@ const updateTime = () => {
   time.textContent = calculateNewTime(startTime);
 };
 
-const startPomodoro = () => countdown = setInterval(updateTime, 1000);;
-const stopPomodoro = () => clearInterval(countdown);
-const resetPomodoro = () => time.textContent = initialTime;
+const startPomodoro = () => {
+  countdown = countdown || setInterval(updateTime, 1000);
+};
+
+const stopPomodoro = () => {
+  clearInterval(countdown);
+  countdown = undefined;
+};
+
+const resetPomodoro = () => {
+  stopPomodoro();
+  time.textContent = initialTime;
+};
 
 startButton.addEventListener('click', startPomodoro);
 stopButton.addEventListener('click', stopPomodoro)
