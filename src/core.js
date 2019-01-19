@@ -1,3 +1,7 @@
+import { compose } from './fp.js';
+import { mod60 } from './math.js'
+import { first, second } from './collection.js'
+
 let countdown;
 
 const startButton = document.getElementById('start-button');
@@ -7,23 +11,11 @@ const resetButton = document.getElementById('reset-button')
 const initialTime = '25:00';
 const time = document.getElementById('time');
 
-const compose = (...fns) => (value) => fns.reduceRight((acc, fn) => fn(acc), value);
-
-const split = (separator) => (text) => text.split(separator);
-const splitByColon = split(':');
-
-const first = (list) => list[0];
-const second = (list) => list[1];
-
 const getHour = compose(first, splitByColon);
 const getMinute = compose(second, splitByColon);
 
-const mod = (divisor) => (dividend) => (((dividend) % divisor) + divisor) % divisor;
-const mod60 = mod(60);
-
-const toString = (number) => number.toString();
-const sindleDigitNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const singleDigit = (numberText) => sindleDigitNumbers.includes(numberText);
+const singleDigitNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const singleDigit = (numberText) => singleDigitNumbers.includes(numberText);
 const addPrefixDigit = (numberText) => singleDigit(numberText) ? `0${numberText}` : numberText;
 
 const nextMinuteNumber = (number) => mod60(number - 1);
