@@ -10,16 +10,16 @@ test('gets the second element from an array', () => {
 
 describe('with an empty array', () => {
   test('gets undefined', () => {
-    expect(first([])).toBe(undefined);
+    expect(first([])).toBeUndefined();
   });
 
   test('gets undefined', () => {
-    expect(second([])).toBe(undefined);
+    expect(second([])).toBeUndefined();
   });
 });
 
 describe('with only one element in the array', () => {
   test('gets undefined', () => {
-    expect(second([1])).toBe(undefined);
+    expect(second([1])).toBeUndefined();
   })
 });
