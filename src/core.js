@@ -7,11 +7,18 @@ const stopButton = document.getElementById('stop-button');
 const resetButton = document.getElementById('reset-button');
 
 const initialTime = '25:00';
+const finishedTime = '00:00';
 const time = document.getElementById('time');
+
+const isFinished = (startTime) => startTime == finishedTime;
+const finishTimer = () => {
+  stopPomodoro();
+  return finishedTime;
+};
 
 const updateTime = () => {
   let startTime = time.textContent;
-  time.textContent = calculateNewTime(startTime);
+  time.textContent = isFinished(startTime) ? finishTimer() : calculateNewTime(startTime);
 };
 
 const startPomodoro = () => {
