@@ -2,6 +2,13 @@
 
 A Pomodoro Timer using Functional Programming style
 
+The idea is to apply the functional programming concepts in a simple project like a pomodoro time. And for this project, principles I cared about was:
+
+- Pure functions: Small, no-side-effect functions
+- Immutability: Strive to keep values immutable & isolate side effects
+- Curry: Making specialized functions
+- Composition: Build small functions and compose them
+
 ## Inspiration
 - [Cynthia's Pomodoro](https://github.com/CynthiaLixinLee/pomodoro-timer/blob/master/js/index.js)
 - [Tomato Timer](https://tomato-timer.com/)
