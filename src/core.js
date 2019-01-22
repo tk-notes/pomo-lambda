@@ -10,14 +10,14 @@ const initialTime = '25:00';
 const finishedTime = '00:00';
 const time = document.getElementById('time');
 
-const isFinished = (startTime) => startTime == finishedTime;
+const isFinished = (startTime) => startTime === finishedTime;
 const finishTimer = () => {
   stopPomodoro();
   return finishedTime;
 };
 
 const updateTime = () => {
-  let startTime = time.textContent;
+  const startTime = time.textContent;
   time.textContent = isFinished(startTime) ? finishTimer() : calculateNewTime(startTime);
 };
 
