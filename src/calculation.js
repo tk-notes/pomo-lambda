@@ -19,11 +19,11 @@ const nextHour = compose(addPrefixDigit, toString, nextHourNumber, Number);
 const passedOneMinute = (minute) => minute == '59';
 
 const calculateNewTime = (startTime) => {
-  let hour = getHour(startTime);
-  let minute = getMinute(startTime);
+  const hour = getHour(startTime);
+  const minute = getMinute(startTime);
 
-  let newMinute = nextMinute(minute);
-  let newHour = passedOneMinute(newMinute) ? nextHour(hour) : hour;
+  const newMinute = nextMinute(minute);
+  const newHour = passedOneMinute(newMinute) ? nextHour(hour) : hour;
 
   return `${newHour}:${newMinute}`;
 };

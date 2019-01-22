@@ -17,7 +17,7 @@ const finishTimer = () => {
 };
 
 const updateTime = () => {
-  let startTime = time.textContent;
+  const startTime = time.textContent;
   time.textContent = isFinished(startTime) ? finishTimer() : calculateNewTime(startTime);
 };
 
