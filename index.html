@@ -11,12 +11,23 @@
 </head>
 
 <body>
-  <div>
-    <span id='time'>25:00</span>
-    <button id='start-button'>Start</button>
-    <button id='stop-button'>Stop</button>
-    <button id='reset-button'>Reset</button>
-  </div>
+  <main class="app manager">
+    <div class="timer-container">
+      <h1 id='time' class="countdown">25:00</h1>
+    </div>
+
+    <div>
+      <div class="options">
+        <div class="option">
+          <div class="button-groups">
+            <button id='start-button' class="button button--primary">Start</button>
+            <button id='stop-button' class="button button--danger">Stop</button>
+            <button id='reset-button' class="button">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <script type="module" src='src/core.js'></script>
 </body>
