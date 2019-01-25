@@ -7,8 +7,8 @@
 :root {
   --bg-body: #1C3041;
 
-  --button-primary-bg: #18F2B2;
-  --button-danger-bg: #89043D;
+  --button-primary-bg: #17989e;
+  --button-danger-bg: #b11e1e;
   --button-default-bg: #fff;
 
   --input-primary-border: #2FE6DE;
@@ -40,7 +40,7 @@ body {
 }
 
 .timer-container h1 {
-  color: #2FE6DE;
+  color: white;
 
   font-size: 13vw;
   text-align: center;
@@ -62,30 +62,32 @@ body {
 }
 
 .button-groups .button {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 /* Buttons */
 .button {
   display: inline-block;
-  padding: 7px 15px;
-
+  padding: 12px 25px;
   font-size: 18px;
-
   border: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   background-color: var(--button-default-bg);
 }
 
 .button--primary {
+  color: var(--text-color-light);
   background-color: var(--button-primary-bg);
 }
 
 .button--danger {
   color: var(--text-color-light);
-
   background-color: var(--button-danger-bg);
+}
+
+.button--reset {
+  background-color: white;
 }
 
 /* Inputs */
